@@ -24,14 +24,13 @@ public class GamePanel extends JPanel implements Runnable{
       Player1 player1 = new Player1(this, keyH);
 
 
-
       public GamePanel() {
       this.setPreferredSize(new Dimension(screenWidth, screenHeight));
       this.setBackground(Color.green);
       this.setDoubleBuffered(true);
-      this.addKeyListener(keyH);
       this.setFocusable(true);
       this.requestFocusInWindow();
+      keyH.configureKeyBindings(this);
       }
 
       public void startGameThread(){

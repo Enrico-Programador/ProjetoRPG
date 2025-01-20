@@ -19,26 +19,17 @@ public class Player1 extends Creatures{
 
     }
     public void setDefaultValues(){
-
         x=100;
         y=100;
         speed=4;
+    }
 
-    }
-    public void update(){
-           if(keyH.upPress){
-            y -= speed;
-           }
-           else if(keyH.downPress){
-             y += speed;
-           }
-           else if(keyH.rightPress){
-             x += speed;
-           }
-           else if(keyH.leftPress){
-             x -= speed;
-           }
-    }
+    public void update() {
+      if (keyH.upPress) y -= speed;
+      if (keyH.downPress) y += speed;
+      if (keyH.leftPress) x -= speed;
+      if (keyH.rightPress) x += speed;
+  }
 
     public void draw(Graphics2D g2){
 
